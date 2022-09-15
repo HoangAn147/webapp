@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main{
+    background-image: linear-gradient(to right, #12c2e9, #c471ed,#f64f59);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.email-list{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 20px;
+}
+
+.title{
+    text-align: center;
+}
+.title h1{
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #12c2e9, #c471ed,#f64f59);
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.title p{
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.email,
+.first-name,
+.last-name{
+    position: relative;
+    padding-top: 10px;
+    margin-left: 5px;
+    border-bottom: 2px solid rgb(189, 195, 199);
+    margin-bottom: 10px;
+}
+
+.email p,
+.first-name p,
+.last-name p{
+    font-size: 18px;
+}
+
+.email input,
+.first-name input,
+.last-name input
+{
+    font-size: 16px;
+    width: 100%;
+    padding: 8px 0px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.email input::placeholder,
+.first-name input::placeholder,
+.last-name input::placeholder{
+    color: rgb(189, 195, 199) !important;
+}
+
+span{
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: 0%;
+    border-bottom: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #12c2e9, #c471ed,#f64f59);
+    transition: 0.3s;
+}
+
+.email input:focus ~span,
+.first-name input:focus ~span,
+.last-name input:focus ~span
+{
+    width: 100%;
+}
+
+.submit{
+    margin: 20px auto 0px auto;
+}
+
+.submit input{
+   padding: 10px 120px;
+   border: none;
+   outline:none;
+   font-size: 18px;
+   border-radius: 20px;
+   background-image: linear-gradient(to right, #12c2e9, #c471ed,#f64f59);
+   color: #fff;
+   font-weight: bold;
+   cursor: pointer;
+   transition: 0.5s;
+}
+
+.submit input:hover{
+    transform: scale(0.9);
+}
